@@ -5,15 +5,15 @@
 
 SECONDS=0 # builtin bash timer
 ZIPNAME="QuickSilver-v2.5-Ginkgo-$(date '+%Y%m%d-%H%M').zip"
-TC_DIR="$HOME/tc/azure-clang"
+TC_DIR="$HOME/tc/clang-12"
 AK3_DIR="$HOME/android/AnyKernel3"
 DEFCONFIG="vendor/ginkgo-perf_defconfig"
 
 export PATH="$TC_DIR/bin:$PATH"
 
 if ! [ -d "$TC_DIR" ]; then
-echo "Azure clang not found! Cloning to $TC_DIR..."
-if ! git clone -q -b main --depth=1 https://gitlab.com/Panchajanya1999/azure-clang $TC_DIR; then
+echo "clang-12 Toolchain Android not found! Cloning to $TC_DIR..."
+if ! git clone -b main https://github.com/fjunio97/CLANG-Toolchain_Android.git $TC_DIR; then
 echo "Cloning failed! Aborting..."
 exit 1
 fi
