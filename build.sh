@@ -19,8 +19,8 @@ exit 1
 fi
 fi
 
-export KBUILD_BUILD_USER=adithya
-export KBUILD_BUILD_HOST=ghostrider_reborn
+export KBUILD_BUILD_USER=SD665
+export KBUILD_BUILD_HOST=Ginkgo_Willow
 
 if [[ $1 = "-r" || $1 = "--regen" ]]; then
 make O=out ARCH=arm64 $DEFCONFIG savedefconfig
